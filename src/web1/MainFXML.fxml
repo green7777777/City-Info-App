@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.web.WebView?>
+
+<BorderPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="web1.Controller">
+   <right>
+      <VBox prefHeight="100.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Exchange rates">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Text>
+            <Text fx:id="TContryToCurrency" strokeType="OUTSIDE" strokeWidth="0.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Text>
+            <Text fx:id="TContryToCurrencyRate" strokeType="OUTSIDE" strokeWidth="0.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Text>
+            <Text fx:id="TContryToPLN" strokeType="OUTSIDE" strokeWidth="0.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Text>
+            <Text fx:id="TContryToPLNRate" strokeType="OUTSIDE" strokeWidth="0.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Text>
+         </children>
+      </VBox>
+   </right>
+   <top>
+      <BorderPane BorderPane.alignment="CENTER">
+         <right>
+            <Button fx:id="BSearch" mnemonicParsing="false" onAction="#BSearchAction" prefWidth="100.0" text="Search" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </BorderPane.margin>
+            </Button>
+         </right>
+         <left>
+            <BorderPane BorderPane.alignment="CENTER">
+               <left>
+                  <TextField fx:id="TFCountryName" prefWidth="200.0" promptText="Enter country name here" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </BorderPane.margin>
+                  </TextField>
+               </left>
+               <center>
+                  <TextField fx:id="TFCityName" prefWidth="200.0" promptText="Enter city name here" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </BorderPane.margin>
+                  </TextField>
+               </center>
+               <right>
+                  <TextField fx:id="TFCurrencyCode" prefWidth="100.0" promptText="Currency Code" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </BorderPane.margin>
+                  </TextField>
+               </right>
+            </BorderPane>
+         </left>
+      </BorderPane>
+   </top>
+   <bottom>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <center>
+                  <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Temperature" />
+                        <Text fx:id="TTemperatureAvg" strokeType="OUTSIDE" strokeWidth="0.0" text="Avergane:" />
+                        <Text fx:id="THumidity" strokeType="OUTSIDE" strokeWidth="0.0" text="Humidity:" />
+                     </children>
+                  </VBox>
+               </center>
+               <left>
+                  <VBox BorderPane.alignment="CENTER">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                        <Text fx:id="TTemperatureMin" strokeType="OUTSIDE" strokeWidth="0.0" text="Max:" />
+                        <Text fx:id="TConditions" strokeType="OUTSIDE" strokeWidth="0.0" text="Conditions:" />
+                     </children>
+                  </VBox>
+               </left>
+               <right>
+                  <VBox BorderPane.alignment="CENTER">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                        <Text fx:id="TTemperatureMax" strokeType="OUTSIDE" strokeWidth="0.0" text="Max:" />
+                        <Text fx:id="TPressure" strokeType="OUTSIDE" strokeWidth="0.0" text="Pressure:" />
+                     </children>
+                  </VBox>
+               </right>
+            </BorderPane>
+         </children>
+      </VBox>
+   </bottom>
+   <center>
+      <WebView fx:id="WV" prefHeight="400.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </WebView>
+   </center>
+</BorderPane>
